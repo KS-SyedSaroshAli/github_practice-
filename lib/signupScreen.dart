@@ -8,7 +8,10 @@ class SignupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Signup'),backgroundColor: Colors.blue,),
+      appBar: AppBar(
+        title: Text('Signup'),
+        backgroundColor: Colors.amberAccent,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -42,7 +45,8 @@ class SignupPage extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                 Navigator.push(context, MaterialPageRoute(builder: (context)=> SignupPage()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SignupPage()));
               },
               child: Text('Already have an account? Login'),
             ),
