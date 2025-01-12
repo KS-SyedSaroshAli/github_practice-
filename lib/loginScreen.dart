@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:practice_github/forgotPassScreen.dart';
 import 'package:practice_github/signupScreen.dart';
 
-class LoginPage extends StatelessWidget{
+class LoginPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Login'),backgroundColor: Colors.red,),
+      appBar: AppBar(
+        title: Text('Login'),
+        backgroundColor: Colors.green,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -26,12 +29,17 @@ class LoginPage extends StatelessWidget{
               decoration: InputDecoration(labelText: 'Password'),
               obscureText: true,
             ),
-              SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             GestureDetector(
-              onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> ForgotPasswordPage()));
-              },
-              child: Text('Forgot Passord?')),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ForgotPasswordPage()));
+                },
+                child: Text('Forgot Passord?')),
             SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
@@ -43,7 +51,8 @@ class LoginPage extends StatelessWidget{
             ),
             TextButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=> SignupPage()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SignupPage()));
               },
               child: Text('Don’t have an account? Sign Up'),
             ),
