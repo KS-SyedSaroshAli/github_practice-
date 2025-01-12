@@ -8,7 +8,7 @@ class SignupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Signup'),backgroundColor: Colors.blue,),
+      appBar: AppBar(title: Text('Signup'),backgroundColor: Colors.pink,),  //changes here from blue to pink by mubeen
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
